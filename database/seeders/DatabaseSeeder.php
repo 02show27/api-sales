@@ -10,23 +10,28 @@ use Illuminate\Support\Facades\Hash;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * 1. Cargamos los datos iniciales de la aplicación.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::updateOrCreate(
+            ['id' => 1],
+            [
+                'name' => 'Test User',
+                'email' => 'admin@test.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'admin@test.com',
-            'password' => Hash::make('password')
-        ]);
-
-        \App\Models\User::create([
-            'name' => 'Usuario Demo',
-            'email' => 'master@test.com',
-            'password' => Hash::make('password')
-        ]);
+        User::updateOrCreate(
+            ['email' => 'master@test.com'],
+            [
+                'name' => 'Usuario Demo',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
         $this->call(ProductSeeder::class);
     }

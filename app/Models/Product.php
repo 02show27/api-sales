@@ -22,11 +22,10 @@ class Product extends Model
         ];
     }
 
-    /**
-     * 1. Asignamos los detalles de venta asociados con el producto.
-     */
+
     public function saleDetails(): HasMany
     {
         return $this->hasMany(SaleDetail::class);
     }
 }
+?>

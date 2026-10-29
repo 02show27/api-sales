@@ -23,17 +23,12 @@ class Sale extends Model
         ];
     }
 
-    /**
-     * 1. Asignamos el usuario asociado con la venta.
-     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    /**
-     * 2. Asignamos los detalles de la venta.
-     */
+
     public function details(): HasMany
     {
         return $this->hasMany(SaleDetail::class);

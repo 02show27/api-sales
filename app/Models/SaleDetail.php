@@ -26,17 +26,13 @@ class SaleDetail extends Model
         ];
     }
 
-    /**
-     * 1. Asignamos la venta a la que pertenece el detalle.
-     */
+
     public function sale(): BelongsTo
     {
         return $this->belongsTo(Sale::class);
     }
 
-    /**
-     * 2. Asignamos el producto vendido.
-     */
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

@@ -47,9 +47,7 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * 1. Asignamos las ventas realizadas por el usuario.
-     */
+ 
     public function sales(): HasMany
     {
         return $this->hasMany(Sale::class);

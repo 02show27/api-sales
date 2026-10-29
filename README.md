@@ -274,7 +274,7 @@ La solución fue desarrollada siguiendo los requerimientos de la prueba técnica
 
 * Consulta de productos existentes.
 * Registro de ventas con uno o varios productos.
-* Uso del usuario estático con `user_id = 1`.
+* Uso del usuario estático con user_id = 1.
 * Validación de usuario, productos y cantidades.
 * Verificación de que la venta contenga al menos un producto.
 * Rechazo de cantidades iguales o menores que cero.
@@ -287,9 +287,9 @@ La solución fue desarrollada siguiendo los requerimientos de la prueba técnica
 * Descuento automático del stock vendido.
 * Uso de transacciones para evitar registros parciales.
 * Reversión completa de la operación ante cualquier error.
-* Bloqueo de productos mediante `lockForUpdate()` durante la venta.
+* Bloqueo de productos mediante lockForUpdate() durante la venta.
 * Consulta de ventas con sus respectivos detalles.
-* Eliminación lógica de ventas mediante `SoftDeletes`.
+* Eliminación lógica de ventas mediante SoftDeletes.
 * Restauración del stock cuando una venta es eliminada.
 * Manejo de ventas inexistentes.
 * Respuestas en formato JSON.
@@ -733,3 +733,4 @@ Estado general: APROBADO
 ## Autor
 
 **Jhonny Tito Castro**
+**29/10/2026**
